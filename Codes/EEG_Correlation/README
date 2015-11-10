@@ -1,0 +1,14 @@
+headEEGcorrelation is the main file. It plots correlation data between head gestures EEG signals.
+
+filename_G.txt: EEG file
+filename_normal.txt: Normal Information file
+filename_velocity.txt: Contains velocity and normal Information
+
+For first_presidential debate: person(videoNum) is used as file name.
+For third presidential debate TPO# and TPR# is used where # denotes the presidential debate video number in the videos used for stimulus. 
+
+Only the video files with audios are used.
+
+The EEG file can be found on the harddisk. Need to modify their name based on the above convention.
+
+Process: Identify the video from the stimulus video. Use the name of the video to locate the file in HD. Now rename the video and run the *.cpp files. Transfer the files to this folder.

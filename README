@@ -1,0 +1,18 @@
+1.Majority of code is written in C++. It consists of three main files: 1. face_landmark_detection.cpp, normalEstimation.cpp and motionDetection.cpp
+
+For correlation with EEG data, matlab scripts are provided in the EEG_Correlation folder
+Dependencies:	
+	* OpenCv
+	* dLib
+2. Compiling the files after installing all the dependencies was a bit tricky. Commands:
+g++ `pkg-config --cflags opencv` `pkg-config --libs opencv` motionDetection.cpp -o motionDetection
+g++ `pkg-config --cflags opencv` `pkg-config --libs opencv` normalEstimation.cpp -o normalEstimation
+g++ -O3 -I.. ../dlib/all/source.cpp  -lpthread -lX11 `pkg-config --cflags opencv` `pkg-config --libs opencv` face_landmark_detection_ex.cpp -o face_landmark_detection
+
+3. filenameIndex contains the information mapping the actual video_name to the video name used by the author.
+
+4. shape_predictor_68_face_landmarks.dat is the file containing the learnt model of 68 facial landmarks. It can be relearnt using the examples of dlib library. 
+
+In case of queries, please contact: 
+
+da2629@columbia.edu
